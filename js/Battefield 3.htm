@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Battefield 3</title>
+        <link rel="icon" type="image/png" href="http://localhost/GW/imgs/sonome.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--temas-->
+        <link href="Battefield%203_arquivos/css.css" rel="stylesheet" type="text/css">
+        <link href="Battefield%203_arquivos/icon.css" rel="stylesheet">
+        <link rel="stylesheet" href="Battefield%203_arquivos/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="Battefield%203_arquivos/custom.css">
+        <link type="text/css" rel="stylesheet" href="Battefield%203_arquivos/materialize.css" media="screen,projection">
+
+        <!--jquery-->
+        <script src="Battefield%203_arquivos/jquery_002.js"></script>
+        <script type="text/javascript" src="Battefield%203_arquivos/jquery.js"></script>
+        <script src="Battefield%203_arquivos/bootstrap.js"></script>
+        <script src="Battefield%203_arquivos/jquery_003.js"></script>
+
+        <script type="text/javascript" src="Battefield%203_arquivos/materialize.js"></script>
+        <!--DatePicker-->
+        <link rel="stylesheet" type="text/css" href="Battefield%203_arquivos/DateTimePicker.css">
+        <script type="text/javascript" src="Battefield%203_arquivos/DateTimePicker.js"></script>
+
+
+        <!--SweetAlert-->
+        <link rel="stylesheet" type="text/css" href="Battefield%203_arquivos/sweetalert.css">
+        <script src="Battefield%203_arquivos/sweetalert.js"></script>
+
+        <!--trigger modal-->
+        <script> $(document).ready(function () {
+                // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+                $('.modal-trigger').leanModal();
+            });</script>
+
+
+        <script>
+            var options = [
+                {selector: '.class', offset: 200, callback: 'globalFunction()'},
+                {selector: '.other-class', offset: 200, callback: 'globalFunction()'},
+            ];
+            Materialize.scrollFire(options);</script>
+
+    </head><body style="overflow: hidden;">
+
+        
+
+
+        <!--NAVBAR-->
+        <div class="navbar-fixed">
+            <nav style="height: 75px">
+                <div class="nav-wrapper teal black">
+                    <a href="http://localhost/GW/logado.php" class="brand-logo center"><img src="Battefield%203_arquivos/logogwpeq.png"></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="http://localhost/GW/logado.php?sair=1"><i class="material-icons">settings_power</i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <div class="row">
+            <div class="container">
+                <div class=" col s2">
+                    <div class="material-placeholder"><img class="materialboxed initialized" src="Battefield%203_arquivos/70619_LB_231__2012-12-05-16-29-53_d0e20a727d2396ea967c34fd0c.jpg" width="100"></div>
+                </div>
+                <div class="col s8">
+                    <h4>Battefield 3</h4>
+                    <h6>Eletronic Arts</h6>
+
+                </div>
+                <form class="col s2 " method="post" action="configjogo.php?idjogo=3"><!--FORM DELETE-->
+                    <button class="btn-floating btn-large waves-effect waves-light white" type="submit" name="delete" id="delete">
+                        <i class="material-icons right black-text">delete</i>
+                
+            </button></form></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class=" col s12">
+                    <ul style="width: 100%;" class="tabs">
+
+                        <li class="tab col s3"><a class="black-text" href="#trailers">Trailers</a></li>
+                        <li class="tab col s3"><a class="black-text active" href="#reviews">Reviews</a></li>
+                        <li class="tab col s3"><a class="black-text" href="#plataformas">Plataformas</a></li>
+                    <div style="right: 318px; left: 319px;" class="indicator"></div></ul>
+                </div>
+
+                <div style="display: none;" id="trailers" class="container-fluid">
+                    <h4>Trailers</h4>
+                    <a class="waves-effect waves-light btn black white-text modal-trigger " href="#modal_add_trailer"><i class="material-icons">add</i></a>
+
+                    <div class="divider black"></div>
+                    <br>
+                    <iframe src="Battefield%203_arquivos/UIUJh2mA8vg.htm" allowfullscreen="" frameborder="0" height="315" width="560"></iframe>                </div>
+                <div style="display: block;" id="reviews" class="container-fluid">
+                    <h5>Reviews</h5>
+
+                    <a class="waves-effect waves-light btn black white-text modal-trigger " href="#modal_add_review"><i class="material-icons">add</i></a>
+                    <br>
+                    <div class="divider"></div>
+
+
+
+
+
+                </div>
+
+
+
+
+                <div style="display: none;" id="plataformas" class="container-fluid"><h5>Esse jogo está disponível nas seguintes plataformas:</h5>
+                    <div class="divider black"></div>
+                    <div class="container-fluid">
+                                                    <h6>X360</h6>
+
+                                                        <h6>Playstation 3</h6>
+
+                                                        <h6>PC</h6>
+
+                                                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--MODAL-->
+        <div id="modal_add_trailer" class="modal">
+            <div class="modal-content">
+                <h3>Battefield 3</h3>
+                <h5>Adicionar Trailer</h5>
+                <div class="container-fluid">
+                    <form method="post" action="configjogo.php?idjogo=3">
+                        <div class="input-field col s8">
+
+                            <input value="3" name="id" id="id" class="validate black-text" type="hidden">
+                            <input value="Battefield 3" name="nome" id="nome" class="validate black-text" type="hidden">
+                        </div>
+                        <div class="input-field col s8">
+                            <label for="trailer" class="black-text">Trailer</label>
+                            <input name="trailer" id="trailer" class="validate black-text" required="" type="text">
+                        </div>
+                        <div class="input-field col s6">
+                            <!--DATE PICKER-->
+                            <label for="data" class="black-text"> Data de Lançamento </label>
+                            <input data-field="date" name="data" id="data" class="black-text" readonly="readonly" required="" type="text">
+                            <div class="dtpicker-overlay dtpicker-mobile" id="dtBox"><div class="dtpicker-bg"><div class="dtpicker-cont"><div class="dtpicker-content"><div class="dtpicker-subcontent"></div></div></div></div></div>
+                            <!--CONFIGURACOES DO DATE PICKER-->
+                            <style type="text/css">
+                                .dtpicker-header .dtpicker-value{
+                                    color: #000000;
+                                }
+                                .dtpicker-components .dtpicker-comp > * {
+                                    color: #000000;
+                                }
+                                .dtpicker-buttonCont .dtpicker-button{
+                                    background: #999999;
+                                }
+                                .dtpicker-header .dtpicker-close{
+                                    color: #000;
+                                }
+                            </style>
+                        </div>
+                        <div class="input-field col s8">
+                            <button class="btn waves-effect white black-text" type="submit" name="adicionar" id="login">Adicionar
+
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!--MODAL-->
+        <div style="z-index: 1003; display: block; opacity: 1; transform: scaleX(1); top: 10%;" id="modal_add_review" class="modal">
+            <div class="modal-content">
+                <h4>Adicionar um Review</h4>
+                <div class="container-fluid">
+                    <form method="post" action="listar.php">
+
+                        <div class="input-field col s8">
+                            <label for="nome" class="black-text">Nome</label>
+                            <input name="nome" id="nome" class="validate black-text" required="" type="text">
+                        </div>
+                        <div class="row">
+                            <div class="container left col s8">
+                                <div class="input-field col s8">
+                                    <h6 class="black-text">Historia</h6>
+                                    <p class="range-field">
+                                        <input value="5" name="graficos" id="graficos" min="0" max="10" type="range"><span class="thumb"><span class="value"></span></span>
+                                    </p>
+                                </div>
+                                <div class="input-field col s8">
+                                    <h6 class="black-text">Graficos</h6>
+                                    <p class="range-field">
+                                        <input value="5" name="graficos" id="graficos" min="0" max="10" type="range"><span class="thumb"><span class="value"></span></span>
+                                    </p>
+                                </div>
+                                <div class="input-field col s8">
+                                    <h6 class="black-text">Jogabilidade</h6>
+                                    <p class="range-field">
+                                        <input value="5" name="graficos" id="graficos" min="0" max="10" type="range"><span class="thumb"><span class="value"></span></span>
+                                    </p>
+                                </div>
+                                  <div class="input-field col s8">
+                                    <h6 class="black-text">Trilha Sonora</h6>
+                                    <p class="range-field">
+                                        <input value="5" class="black-text active" name="graficos" id="graficos" min="0" max="10" type="range"><span style="left: 246.967px; height: 30px; width: 30px; top: -20px; margin-left: -15px;" class="thumb active"><span class="value">5</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-field col s8">
+                            <button class="btn waves-effect white black-text" type="submit" name="add_plataforma" id="login"> Submit
+                                <i class="material-icons right"> send </i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <footer class="page-footer black">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Gamer World</h5>
+                        <p class="grey-text text-lighten-4">Seu site de games</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    2015 Gamer World
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            $(document).ready(function ()
+            {
+                $("#dtBox").DateTimePicker({
+                    dateFormat: "yyyy-mm-dd",
+                    shortDayNames: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"],
+                    shortMonthNames: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+                    fullMonthNames: ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+                    titleContentDate: "",
+                    setButtonContent: "Aplicar",
+                    clearButtonContent: "Limpar",
+                })
+            });</script>
+    
+
+<div class="hiddendiv common"></div><div style="z-index: 1002; display: block; opacity: 0.5;" id="materialize-lean-overlay-1" class="lean-overlay"></div></body></html>
